@@ -1,4 +1,7 @@
 
+body {
+  background-image: url('https://miro.medium.com/max/2160/1*hU0QQDiOnsKpX4qlIyn_4w.jpeg');
+}
 #container {
   display: flex;
   flex-direction: column;
