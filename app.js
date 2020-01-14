@@ -27,7 +27,7 @@ inputdata.addEventListener('keyup', function (event) {
     if(inputdata.value != ''){
       let li = document.createElement("LI");
   
-      li.innerHTML =  inputdata.value +
+      li.innerHTML =   inputdata.value +
                       '<span><i class="fas fa-plus add-todo-to-main-li"></i></span>' +
                       '<input type ="text" placeholder="Add to dos" class = "add-to-list hide">' +
                       '<ul class = "hide">' +
@@ -50,7 +50,15 @@ myList.onclick = function(event) {
     event.target.classList.toggle('lineThrough');
   } 
   else if (event.target.classList.contains('delete-todo')) {
-    event.target.parentNode.remove();
+    // if()
+    console.log(event.target.parentNode.parentNode.children.length);
+    if(event.target.parentNode.parentNode.children.length === 1) {
+      event.target.parentNode.parentNode.parentNode.remove();
+    }
+    else{
+      event.target.parentNode.remove();
+    }
+    
   }
 }
 
